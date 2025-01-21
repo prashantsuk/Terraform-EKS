@@ -25,7 +25,7 @@ jobs:
 
       # Terraform Init - Initializes the Terraform working directory
       - name: Terraform Init
-        run: cd  terraform init
+        run:  terraform init
 
       # Terraform Format Check (optional but recommended)
       - name: Terraform Format Check
