@@ -1,4 +1,4 @@
-ame: EKS Cluster build
+name: EKS Cluster build
 
 on:
   push:
