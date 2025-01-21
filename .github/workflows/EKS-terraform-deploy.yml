@@ -17,8 +17,6 @@ jobs:
       # Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v2  
-        
-     
 
       - name: path
         run : ls
@@ -38,7 +36,8 @@ jobs:
       # Terraform Apply - Apply changes to AWS infrastructure
       - name: Terraform Apply
         if: github.event_name == 'push'  # Apply only on direct push (not on PR)
-        run: terraform apply -auto-approve
+        # for apply use terraform apply & for delete use terraform destroy
+        run: terraform destroy -auto-approve
 
       # Output Terraform State (optional)
       - name: Terraform State Output
