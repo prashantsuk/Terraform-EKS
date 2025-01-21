@@ -26,15 +26,15 @@ jobs:
 
       # Terraform Init - Initializes the Terraform working directory
       - name: Terraform Init
-        run: terraform init
+        run: cd  terraform init
 
       # Terraform Format Check (optional but recommended)
       - name: Terraform Format Check
-        run: terraform fmt -check
+        run: cd terraform fmt -check
 
       # Terraform Plan - Shows what Terraform will do without actually doing it
       - name: Terraform Plan
-        run: terraform plan
+        run:  cd terraform plan
 
       # Terraform Apply - Apply changes to AWS infrastructure
       - name: Terraform Apply
