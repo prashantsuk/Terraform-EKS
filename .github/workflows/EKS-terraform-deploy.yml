@@ -16,7 +16,10 @@ jobs:
     steps:
       # Checkout the repository
       - name: Checkout code
-        uses: actions/checkout@v2     
+        uses: actions/checkout@v2  
+        
+      - name: finding path 
+        run : pwd
 
       - name: path
         run : ls
