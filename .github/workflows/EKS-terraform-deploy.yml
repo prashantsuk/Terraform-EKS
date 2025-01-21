@@ -37,7 +37,7 @@ jobs:
       - name: Terraform Apply
         if: github.event_name == 'push'  # Apply only on direct push (not on PR)
         # for apply use terraform apply & for delete use terraform destroy
-        run: terraform destroy -auto-approve
+        run: terraform apply -auto-approve
 
       # Output Terraform State (optional)
       - name: Terraform State Output
