@@ -3,7 +3,7 @@ name: Terraform Workflow
 on:
   push:
     branches:
-      - main   # Trigger on push to the main branch
+      - main   
   pull_request:
     branches:
       - main   # Trigger on pull request to the main branch
@@ -21,15 +21,15 @@ jobs:
       - name: path
         run : ls
 
-      # Terraform Init - Initializes the Terraform working directory
+      # Terraform Init 
       - name: Terraform Init
         run:  terraform init
 
-      # Terraform Format Check (optional but recommended)
+      # Terraform Format Check 
       - name: Terraform Format Check
         run:  terraform fmt -check
 
-      # Terraform Plan - Shows what Terraform will do without actually doing it
+      # Terraform Plan 
       - name: Terraform Plan
         run:   terraform plan
 
