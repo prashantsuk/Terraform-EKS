@@ -18,6 +18,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2     
 
+      - name: path
+        run : ls
+
       # Terraform Init - Initializes the Terraform working directory
       - name: Terraform Init
         run: terraform init
