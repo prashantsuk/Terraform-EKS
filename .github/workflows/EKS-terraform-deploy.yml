@@ -11,7 +11,7 @@ on:
 jobs:
   terraform:
     name: Terraform Apply
-    runs-on:  ubuntu-latest
+    runs-on:  [self-hosted]
 
     steps:
       # Checkout the repository
@@ -25,11 +25,11 @@ jobs:
           terraform_version: '1.10.4'  # Specify the Terraform version you need
 
       # Configure AWS credentials using GitHub Secrets
-      #- name: Configure AWS credentials
-       # uses: aws-actions/configure-aws-credentials@v1
-        #with:
-         # aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          #aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           #aws-region: ${{ secrets.AWS_REGION }}
 
       # Terraform Init - Initializes the Terraform working directory
