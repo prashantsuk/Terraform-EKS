@@ -18,8 +18,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2  
         
-      - name: finding path 
-        run : cd Eks-terraform
+     
 
       - name: path
         run : ls
@@ -30,11 +29,11 @@ jobs:
 
       # Terraform Format Check (optional but recommended)
       - name: Terraform Format Check
-        run: cd terraform fmt -check
+        run:  terraform fmt -check
 
       # Terraform Plan - Shows what Terraform will do without actually doing it
       - name: Terraform Plan
-        run:  cd terraform plan
+        run:   terraform plan
 
       # Terraform Apply - Apply changes to AWS infrastructure
       - name: Terraform Apply
