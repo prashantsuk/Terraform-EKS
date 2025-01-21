@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2  
         
       - name: finding path 
-        run : pwd
+        run : cd Eks-terraform
 
       - name: path
         run : ls
