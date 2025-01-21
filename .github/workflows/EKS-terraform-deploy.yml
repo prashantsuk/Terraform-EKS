@@ -11,7 +11,7 @@ on:
 jobs:
   terraform:
     name: Terraform Apply
-    runs-on:  [self-hosted ubuntu]
+    runs-on:  [self-hosted ubuntu Linux x64]
 
     steps:
       # Checkout the repository
