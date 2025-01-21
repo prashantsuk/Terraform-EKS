@@ -11,7 +11,7 @@ on:
 jobs:
   terraform:
     name: Terraform Apply
-    runs-on:  [self-hosted prashant]
+    runs-on:  [self-hosted]
 
     steps:
       # Checkout the repository
